@@ -81,12 +81,17 @@ class MainActivity : AppCompatActivity() {
             .build()
 
         //Notification Builder
+        val bitmapIcon = BitmapFactory.decodeResource(this.resources,R.drawable.icon_instagram)
+        val bitmapIconlarge = BitmapFactory.decodeResource(this.resources,R.drawable.icon_instagram)
         val notification = NotificationCompat.Builder(this, channelId)
             .setContentTitle("Instagram Message")
             .setContentText("mr.ansari7 is message you")
             .setAutoCancel(true)
-            .setSmallIcon(R.drawable.icon_instagram)
-            .setPriority(NotificationCompat.PRIORITY_HIGH)
+            .setSmallIcon(R.drawable.icon_instagram) //top small icon
+            .setLargeIcon(bitmapIconlarge) //side icon
+            .setStyle(NotificationCompat.BigPictureStyle().bigPicture(bitmapIcon)) //below image
+            .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+            .setPriority(NotificationCompat.DEFAULT_ALL)
             .addAction(activityNotificationDetailsActivity)
             .addAction(actionSettingsActivity)
             .addAction(replayAction)
