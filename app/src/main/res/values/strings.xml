@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Jetpack Notifications</string>
+    <string name="app_setting">Setting</string>
+    <string name="app_dashboard">Dashboard</string>
+    <string name="app_click">Click Notify</string>
+</resources>
